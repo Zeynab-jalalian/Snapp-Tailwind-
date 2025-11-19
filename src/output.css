@@ -8,8 +8,11 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --font-iran_Medium: iran_Medium;
     --font-iran_Regular: iran_Regular;
+    --color-main_Snapp: #00d170;
     --color-header: #3c4151;
   }
 }
@@ -168,6 +171,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -198,6 +204,9 @@
   .table {
     display: table;
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-\[100px\] {
     height: 100px;
   }
@@ -206,9 +215,6 @@
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
-  }
-  .w-4\/5 {
-    width: calc(4/5 * 100%);
   }
   .w-full {
     width: 100%;
@@ -219,11 +225,17 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
   .items-center {
     align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -256,11 +268,26 @@
   .stroke-2 {
     stroke-width: 2;
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .px-\[5\%\] {
     padding-inline: 5%;
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -271,15 +298,22 @@
   .font-iran_Regular {
     font-family: var(--font-iran_Regular);
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-\[16px\] {
-    font-size: 16px;
+  .text-\[\#22a958\] {
+    color: #22a958;
   }
   .text-header {
     color: var(--color-header);
+  }
+  .text-main_Snapp {
+    color: var(--color-main_Snapp);
   }
   .underline {
     text-decoration-line: underline;
@@ -296,12 +330,6 @@
   .md\:hidden {
     @media (width >= 840px) {
       display: none;
-    }
-  }
-  .lg\:text-sm {
-    @media (width >= 1024px) {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
   .lg\:text-\[16px\] {
