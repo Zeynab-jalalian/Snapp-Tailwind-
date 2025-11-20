@@ -202,6 +202,9 @@
   .my-\[100px\] {
     margin-block: 100px;
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -402,6 +405,9 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .text-center {
+    text-align: center;
+  }
   .font-iran_Bold {
     font-family: var(--font-iran_Bold);
   }
@@ -505,6 +511,36 @@
   .md\:w-1\/2 {
     @media (width >= 840px) {
       width: calc(1/2 * 100%);
+    }
+  }
+  .lg\:mt-0 {
+    @media (width >= 1024px) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:flex {
+    @media (width >= 1024px) {
+      display: flex;
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 1024px) {
+      flex-direction: row;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 1024px) {
+      justify-content: center;
+    }
+  }
+  .lg\:justify-start {
+    @media (width >= 1024px) {
+      justify-content: flex-start;
+    }
+  }
+  .lg\:text-right {
+    @media (width >= 1024px) {
+      text-align: right;
     }
   }
   .lg\:text-\[16px\] {
