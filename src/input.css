@@ -19,7 +19,6 @@
   --color-header: #3c4151;
   --color-green1: #21aa58;
 }
-
 @layer base {
   @font-face {
     font-family: "iran_Bold";

@@ -24,7 +24,7 @@
       <ul
         class="lg:text-[16px] w-full h-full px-[5%] mx-auto flex justify-start items-center gap-6 text-sm text-header font-iran_Regular"
       >
-        <li>
+        <li class="relative">
           <a href="#">
             <img
               src="src/images/logo/snappTextLogo.svg"
@@ -33,6 +33,27 @@
               height="32"
             />
           </a>
+          <ul
+            class="bg-white shadow-xl border p-3 gap-3 hidden flex-col justify-start items-start w-[200px] top-7 right-[70px] border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
+          >
+            <li><a href="#">درخواست تاکسی</a></li>
+            <li><a href="#">پیک موتوری</a></li>
+            <li><a href="#">سفارش آنلاین غذا</a></li>
+            <li><a href="#">سوپرمارکت آنلاین</a></li>
+            <li><a href="#">رزرو بلیط هواپیما</a></li>
+            <li><a href="#">رزرو هتل</a></li>
+            <li><a href="#">رزرو بلیط قطار</a></li>
+            <li><a href="#">رزرو بلیط اتوبوس</a></li>
+            <li><a href="#">درخواست وانت بار</a></li>
+            <li><a href="#">اسنپ پی</a></li>
+            <li><a href="#">خدمات اسباب کشی</a></li>
+            <li><a href="#">فروشگاه اسنپ</a></li>
+            <li><a href="#">اسنپ بیمه</a></li>
+            <li><a href="#">پزشک و مشاور</a></li>
+            <li><a href="#">اسنپ پرو</a></li>
+            <li><a href="#">سرمایه گذاری</a></li>
+            <li><a href="#">خرید شارژ و اینترنت</a></li>
+          </ul>
         </li>
         <li class="mr-2">
           <a href="#" class="flex justify-center items-center gap-1">
@@ -64,7 +85,7 @@
         <li>
           <a href="#"> بلاگ </a>
         </li>
-        <li>
+        <li class="relative">
           <a href="#" class="flex items-center justify-center gap-1">
             درباره اسنپ
             <svg
@@ -81,6 +102,13 @@
               />
             </svg>
           </a>
+          <ul
+            class="bg-white shadow-xl border p-3 gap-4 hidden flex-col justify-start items-start w-[150px] top-7 border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
+          >
+            <li><a href="#"></a>فرصت های شغلی</li>
+            <li><a href="#"></a>درباره ما</li>
+            <li><a href="#"></a>تماس با ما</li>
+          </ul>
         </li>
       </ul>
     </header>
@@ -830,8 +858,12 @@
     <!--Navy part end-->
 
     <!--Footer start-->
-    <footer class="flex flex-col justify-center items-center w-[75%] mx-auto py-5">
-      <div class="flex justify-center items-center flex-wrap gap-7 font-iran_Light text-[16px] text-header pt-3">
+    <footer
+      class="flex flex-col justify-center items-center w-[75%] mx-auto py-5"
+    >
+      <div
+        class="flex justify-center items-center flex-wrap gap-7 font-iran_Light text-[16px] text-header pt-3"
+      >
         <a href="#">فرصت‌های شغلی</a>
         <a href="#">بلاگ</a>
         <a href="#">شرایط و قوانین</a>
@@ -845,30 +877,70 @@
       </div>
       <div class="flex justify-center items-center flex-wrap gap-7 my-10">
         <a href="#">
-          <img src="src/images/icons/Twitter.svg" width="29" height="29" alt="social">
+          <img
+            src="src/images/icons/Twitter.svg"
+            width="29"
+            height="29"
+            alt="social"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/Instagram.svg" width="29" height="29" alt="social">
+          <img
+            src="src/images/icons/Instagram.svg"
+            width="29"
+            height="29"
+            alt="social"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/Youtube.svg" width="29" height="29" alt="social">
+          <img
+            src="src/images/icons/Youtube.svg"
+            width="29"
+            height="29"
+            alt="social"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/Linkedin.svg" width="29" height="29" alt="social">
+          <img
+            src="src/images/icons/Linkedin.svg"
+            width="29"
+            height="29"
+            alt="social"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/Telegram.svg" width="29" height="29" alt="social">
+          <img
+            src="src/images/icons/Telegram.svg"
+            width="29"
+            height="29"
+            alt="social"
+          />
         </a>
       </div>
       <div class="flex justify-center items-center flex-wrap gap-7">
         <a href="#">
-          <img src="src/images/icons/enamad-logo.png" width="130" height="130" alt="icon">
+          <img
+            src="src/images/icons/enamad-logo.png"
+            width="130"
+            height="130"
+            alt="icon"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/samandehi-logo.png" width="130" height="130" alt="icon">
+          <img
+            src="src/images/icons/samandehi-logo.png"
+            width="130"
+            height="130"
+            alt="icon"
+          />
         </a>
         <a href="#">
-          <img src="src/images/icons/namad.png" width="130" height="130" alt="icon">
+          <img
+            src="src/images/icons/namad.png"
+            width="130"
+            height="130"
+            alt="icon"
+          />
         </a>
       </div>
     </footer>
@@ -876,6 +948,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+
+
       var swiper = new Swiper(".mySwiper", {
         loop: true,
         pagination: {
