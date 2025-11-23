@@ -161,68 +161,47 @@
             />
           </svg>
           <div class="w-full flex flex-col justify-start items-start gap-10">
-            <div
-              class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2"
-            >
-              <a href="#">سوپراپ اسنپ</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
+            <div class="w-full">
+              <div
+                class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2 superapp-toggle"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                />
-              </svg>
-            </div>
-            <a href="#"
-              >ثبت نام راننده اسنپ
-              <span class="text-main_Snapp font-iran_Regular"
-                >(سواری، موتور و وانت)</span
+                <a href="#" class="relative">سوپراپ اسنپ</a>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="submenu hidden flex-col justify-start items-start gap-2 mt-2 px-4 max-h-200 overflow-y-auto"
               >
-            </a>
-            <a href="#">باشگاه رانندگان</a>
-            <a href="#">پنل سازمانی</a>
-            <a href="#">بلاگ</a>
-            <div
-              class="cursor-pointer flex justify-between items-center w-full"
-            >
-              <a href="#">درباره اسنپ</a
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                />
-              </svg>
-            </div>
-            <div
-              class="cursor-pointer flex justify-between items-center w-full text-main_Snapp"
-            >
-              <a href="#">اپلیکیشن اسنپ</a
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                />
-              </svg>
+                <a href="#">درخواست تاکسی</a>
+                <a href="#">پیک موتوری</a>
+                <a href="#">سفارش آنلاین غذا</a>
+                <a href="#">سوپرمارکت آنلاین</a>
+                <a href="#">رزرو بلیط هواپیما</a>
+                <a href="#">رزرو هتل</a>
+                <a href="#">رزرو بلیط قطار</a>
+                <a href="#">رزرو بلیط اتوبوس</a>
+                <a href="#">درخواست وانت بار</a>
+                <a href="#">اسنپ پی</a>
+                <a href="#">خدمات اسباب کشی</a>
+                <a href="#">فروشگاه اسنپ</a>
+                <a href="#">اسنپ بیمه</a>
+                <a href="#">پزشک و مشاور</a>
+                <a href="#">اسنپ پرو</a>
+                <a href="#">سرمایه گذاری</a>
+                <a href="#">خرید شارژ و اینترنت</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1058,8 +1037,20 @@
         menu.style.right = "-100%";
       });
       document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && e.target !== hamMenu) {
+        if (!menu.contains(e.target) && !e.target.closest(".hamMenu")) {
           menu.style.right = "-100%";
+        }
+      });
+
+      const superapp_toggle = document.querySelector(".superapp-toggle");
+      const submenu = document.querySelector(".submenu");
+      superapp_toggle.addEventListener("click", () => {
+        if (submenu.classList.contains("hidden")) {
+          submenu.classList.remove("hidden");
+          submenu.classList.add("flex");
+        } else {
+          submenu.classList.add("hidden");
+          submenu.classList.remove("flex");
         }
       });
       //slider
@@ -1073,3 +1064,88 @@
     </script>
   </body>
 </html>
+<!--
+<div
+              class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2"
+            >
+              <a href="#" class="relative">سوپراپ اسنپ</a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+              <div class="absolute flex flex-col justify-start items-start gap-2 top-0 h-auto">
+                <a href="#">درخواست تاکسی</a>
+                <a href="#">پیک موتوری</a>
+                <a href="#">سفارش آنلاین غذا</a>
+                <a href="#">سوپرمارکت آنلاین</a>
+                <a href="#">رزرو بلیط هواپیما</a>
+                <a href="#">رزرو هتل</a>
+                <a href="#">رزرو بلیط قطار</a>
+                <a href="#">رزرو بلیط اتوبوس</a>
+                <a href="#">درخواست وانت بار</a>
+                <a href="#">اسنپ پی</a>
+                <a href="#">خدمات اسباب کشی</a>
+                <a href="#">فروشگاه اسنپ</a>
+                <a href="#">اسنپ بیمه</a>
+                <a href="#">پزشک و مشاور</a>
+                <a href="#">اسنپ پرو</a>
+                <a href="#">سرمایه گذاری</a>
+                <a href="#">خرید شارژ و اینترنت</a>
+                <div></div>
+              </div>
+              <a href="#"
+                >ثبت نام راننده اسنپ
+                <span class="text-main_Snapp font-iran_Regular"
+                  >(سواری، موتور و وانت)</span
+                >
+              </a>
+              <a href="#">باشگاه رانندگان</a>
+              <a href="#">پنل سازمانی</a>
+              <a href="#">بلاگ</a>
+              <div
+                class="cursor-pointer flex justify-between items-center w-full"
+              >
+                <a href="#">درباره اسنپ</a
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </div>
+              <div
+                class="cursor-pointer flex justify-between items-center w-full text-main_Snapp"
+              >
+                <a href="#">اپلیکیشن اسنپ</a
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </div>
+            </div>
+-->
