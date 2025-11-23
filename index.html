@@ -24,7 +24,7 @@
       <ul
         class="lg:text-[16px] w-full h-full px-[5%] mx-auto flex justify-start items-center gap-6 text-sm text-header font-iran_Regular"
       >
-        <li class="relative">
+        <li>
           <a href="#">
             <img
               src="src/images/logo/snappTextLogo.svg"
@@ -33,8 +33,26 @@
               height="32"
             />
           </a>
+        </li>
+        <li class="mr-2 relative group">
+          <a href="#" class="flex justify-center items-center gap-1">
+            سوپراپ اسنپ
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-down fill-black stroke-2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </a>
           <ul
-            class="bg-white shadow-xl border p-3 gap-3 hidden flex-col justify-start items-start w-[200px] top-7 right-[70px] border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
+            class="bg-white shadow-xl border p-3 gap-3 hidden group-hover:flex transition-all flex-col justify-start items-start w-[200px] top-7 border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
           >
             <li><a href="#">درخواست تاکسی</a></li>
             <li><a href="#">پیک موتوری</a></li>
@@ -55,24 +73,6 @@
             <li><a href="#">خرید شارژ و اینترنت</a></li>
           </ul>
         </li>
-        <li class="mr-2">
-          <a href="#" class="flex justify-center items-center gap-1">
-            سوپراپ اسنپ
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-down fill-black stroke-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-              />
-            </svg>
-          </a>
-        </li>
         <li>
           <a href="#"> ثبت نام راننده اسنپ </a>
         </li>
@@ -85,7 +85,7 @@
         <li>
           <a href="#"> بلاگ </a>
         </li>
-        <li class="relative">
+        <li class="relative group">
           <a href="#" class="flex items-center justify-center gap-1">
             درباره اسنپ
             <svg
@@ -103,7 +103,7 @@
             </svg>
           </a>
           <ul
-            class="bg-white shadow-xl border p-3 gap-4 hidden flex-col justify-start items-start w-[150px] top-7 border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
+            class="bg-white shadow-xl border p-3 gap-4 hidden group-hover:flex transition-all flex-col justify-start items-start w-[150px] top-7 border-[#c0c0c0] rounded-md text-md text-header font-iran_Regular absolute"
           >
             <li><a href="#"></a>فرصت های شغلی</li>
             <li><a href="#"></a>درباره ما</li>
@@ -948,8 +948,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-
-
       var swiper = new Swiper(".mySwiper", {
         loop: true,
         pagination: {
