@@ -143,7 +143,7 @@
       </div>
 
       <div
-        class="w-3/4 bg-white h-screen overflow-y-auto absolute top-0 -right-full transition-all duration-500 ease-in-out pb-10 menu"
+        class="z-50 w-3/4 bg-white h-screen overflow-y-auto absolute top-0 -right-full transition-all duration-500 ease-in-out pb-10 menu"
       >
         <div
           class="w-full px-4 pt-10 flex flex-col justify-start items-start gap-3 font-iran_Regular"
@@ -315,6 +315,10 @@
           </div>
         </div>
       </div>
+
+      <div
+        class="backdrop hidden fixed inset-0 bg-[rgba(0,0,0,0.5)]  transition-all duration-300"
+      ></div>
     </header>
     <!--Header end-->
 
@@ -1139,17 +1143,21 @@
       const hamMenu = document.querySelector(".hamMenu");
       const menu = document.querySelector(".menu");
       const closeMenu = document.querySelector(".closeMenu");
+      const backdrop = document.querySelector(".backdrop");
       hamMenu.addEventListener("click", () => {
         menu.style.right = "0";
+        backdrop.classList.remove("hidden");
         document.body.style.overflow = "hidden";
       });
       closeMenu.addEventListener("click", () => {
         menu.style.right = "-100%";
+        backdrop.classList.add("hidden");
         document.body.style.overflow = "auto";
       });
       document.addEventListener("click", (e) => {
         if (!menu.contains(e.target) && !e.target.closest(".hamMenu")) {
           menu.style.right = "-100%";
+          backdrop.classList.add("hidden");
           document.body.style.overflow = "auto";
         }
       });
