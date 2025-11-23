@@ -114,7 +114,7 @@
     </header>
     <!--Header Responsive-->
     <header
-      class="md:hidden w-full h-20 bg-white  fixed top-0 right-0 py-1 px-3 flex justify-between items-center z-50"
+      class="md:hidden w-full h-20 bg-white fixed top-0 right-0 py-1 px-3 flex justify-between items-center z-50"
     >
       <div
         class="text-[#22a958] cursor-pointer hover:bg-slate-200 p-2 rounded-lg relative"
@@ -142,7 +142,7 @@
         />
       </div>
 
-      <div class="w-1/2 bg-white h-screen absolute top-0 right-0">
+      <div class="w-1/2 bg-white h-screen absolute top-0 right-0 hidden">
         <div
           class="w-full px-4 pt-10 flex flex-col justify-start items-start gap-3 font-iran_Regular"
         >
@@ -159,7 +159,9 @@
             />
           </svg>
           <div class="w-full flex flex-col justify-start items-start gap-10">
-            <div class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2">
+            <div
+              class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2"
+            >
               <a href="#">سوپراپ اسنپ</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -175,13 +177,18 @@
                 />
               </svg>
             </div>
-            <a href="#">ثبت نام راننده اسنپ
-              <span class="text-main_Snapp font-iran_Regular">(سواری، موتور و وانت)</span>
+            <a href="#"
+              >ثبت نام راننده اسنپ
+              <span class="text-main_Snapp font-iran_Regular"
+                >(سواری، موتور و وانت)</span
+              >
             </a>
             <a href="#">باشگاه رانندگان</a>
             <a href="#">پنل سازمانی</a>
             <a href="#">بلاگ</a>
-            <div class="cursor-pointer flex justify-between items-center w-full">
+            <div
+              class="cursor-pointer flex justify-between items-center w-full"
+            >
               <a href="#">درباره اسنپ</a
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +204,9 @@
                 />
               </svg>
             </div>
-            <div class="cursor-pointer flex justify-between items-center w-full text-main_Snapp">
+            <div
+              class="cursor-pointer flex justify-between items-center w-full text-main_Snapp"
+            >
               <a href="#">اپلیکیشن اسنپ</a
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -730,7 +739,11 @@
     <!--Super app start-->
     <div class="flex flex-col lg:flex-row justify-start items-start my-7 gap-5">
       <div class="lg:w-1/2 w-full h-full">
-        <img src="src/images/super-app.jpg" alt="super-app-snapp-img" />
+        <img
+          src="src/images/super-app.jpg"
+          alt="super-app-snapp-img"
+          class="w-full lg:h-full sm:h-[300px] h-[230px] object-cover"
+        />
       </div>
       <div
         class="lg:w-1/2 sm:w-4/5 w-full mx-auto lg:mx-0 h-full p-5 flex flex-col"
