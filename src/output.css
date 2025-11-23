@@ -532,6 +532,9 @@
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
   .text-center {
     text-align: center;
   }
@@ -598,6 +601,9 @@
   }
   .text-\[\#686c79\] {
     color: #686c79;
+  }
+  .text-\[\#686c89\] {
+    color: #686c89;
   }
   .text-green1 {
     color: var(--color-green1);

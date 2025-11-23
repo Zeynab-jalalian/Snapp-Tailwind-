@@ -143,7 +143,7 @@
       </div>
 
       <div
-        class="w-1/2 bg-white h-screen overflow-y-auto absolute top-0 -right-full transition-all duration-500 ease-in-out menu"
+        class="w-3/4 bg-white h-screen overflow-y-auto absolute top-0 -right-full transition-all duration-500 ease-in-out pb-10 menu"
       >
         <div
           class="w-full px-4 pt-10 flex flex-col justify-start items-start gap-3 font-iran_Regular"
@@ -260,11 +260,56 @@
               </div>
 
               <div
-                class="submenu hidden flex-col justify-start items-start gap-2 mt-2 px-4 max-h-200 overflow-y-auto"
+                class="submenu hidden flex-col justify-start items-start gap-2 mt-2 px-4 max-h-200 overflow-y-auto text-[#686c89]"
               >
-                <a href="#">فرصت های شغلی</a>
-                <a href="#">درباره ما</a>
-                <a href="#">تماس با ما</a>
+                <a href="#" class="flex justify-center items-center gap-1">
+                  <img
+                    src="src/images/header/directdownload-icon.png"
+                    alt="header-img"
+                    width="24"
+                    height="24"
+                  />
+                  <span> دانلود مستقیم</span>
+                </a>
+                <a href="#" class="flex justify-center items-center gap-1">
+                  <img
+                    src="src/images/header/cafebazaar.png"
+                    alt="header-img"
+                    width="24"
+                    height="24"
+                  />
+                  <span>دانلود از کافه‌بازار</span>
+                </a>
+                <a href="#" class="flex justify-center items-center gap-1">
+                  <img
+                    src="src/images/header/myketmarketicon.png"
+                    alt="header-img"
+                    width="24"
+                    height="24"
+                  />
+                  <span>دانلود از مایکت</span>
+                </a>
+                <a href="#" class="flex justify-center items-center gap-1">
+                  <img
+                    src="src/images/header/snapp-pwa.svg"
+                    alt="header-img"
+                    width="24"
+                    height="24"
+                  />
+                  <span>
+                    وب اپلیکیشن اسنپ
+                    <span>( iOS)</span>
+                  </span>
+                </a>
+                <a href="#" class="flex justify-center items-center gap-1">
+                  <img
+                    src="src/images/header/apple.png"
+                    alt="header-img"
+                    width="24"
+                    height="24"
+                  />
+                  <span>دانلود از اپ استور</span>
+                </a>
               </div>
             </div>
           </div>
@@ -1096,13 +1141,16 @@
       const closeMenu = document.querySelector(".closeMenu");
       hamMenu.addEventListener("click", () => {
         menu.style.right = "0";
+        document.body.style.overflow = "hidden";
       });
       closeMenu.addEventListener("click", () => {
         menu.style.right = "-100%";
+        document.body.style.overflow = "auto";
       });
       document.addEventListener("click", (e) => {
         if (!menu.contains(e.target) && !e.target.closest(".hamMenu")) {
           menu.style.right = "-100%";
+          document.body.style.overflow = "auto";
         }
       });
 
@@ -1128,88 +1176,3 @@
     </script>
   </body>
 </html>
-<!--
-<div
-              class="cursor-pointer flex justify-between items-center w-full border-b border-[#f3f3f3] pb-2"
-            >
-              <a href="#" class="relative">سوپراپ اسنپ</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                />
-              </svg>
-              <div class="absolute flex flex-col justify-start items-start gap-2 top-0 h-auto">
-                <a href="#">درخواست تاکسی</a>
-                <a href="#">پیک موتوری</a>
-                <a href="#">سفارش آنلاین غذا</a>
-                <a href="#">سوپرمارکت آنلاین</a>
-                <a href="#">رزرو بلیط هواپیما</a>
-                <a href="#">رزرو هتل</a>
-                <a href="#">رزرو بلیط قطار</a>
-                <a href="#">رزرو بلیط اتوبوس</a>
-                <a href="#">درخواست وانت بار</a>
-                <a href="#">اسنپ پی</a>
-                <a href="#">خدمات اسباب کشی</a>
-                <a href="#">فروشگاه اسنپ</a>
-                <a href="#">اسنپ بیمه</a>
-                <a href="#">پزشک و مشاور</a>
-                <a href="#">اسنپ پرو</a>
-                <a href="#">سرمایه گذاری</a>
-                <a href="#">خرید شارژ و اینترنت</a>
-                <div></div>
-              </div>
-              <a href="#"
-                >ثبت نام راننده اسنپ
-                <span class="text-main_Snapp font-iran_Regular"
-                  >(سواری، موتور و وانت)</span
-                >
-              </a>
-              <a href="#">باشگاه رانندگان</a>
-              <a href="#">پنل سازمانی</a>
-              <a href="#">بلاگ</a>
-              <div
-                class="cursor-pointer flex justify-between items-center w-full"
-              >
-                <a href="#">درباره اسنپ</a
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-down"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                  />
-                </svg>
-              </div>
-              <div
-                class="cursor-pointer flex justify-between items-center w-full text-main_Snapp"
-              >
-                <a href="#">اپلیکیشن اسنپ</a
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-down"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                  />
-                </svg>
-              </div>
-            </div>
--->
