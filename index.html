@@ -1057,6 +1057,11 @@
       closeMenu.addEventListener("click", () => {
         menu.style.right = "-100%";
       });
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && e.target !== hamMenu) {
+          menu.style.right = "-100%";
+        }
+      });
       //slider
       var swiper = new Swiper(".mySwiper", {
         loop: true,
